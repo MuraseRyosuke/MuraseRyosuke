@@ -1,66 +1,18 @@
-<div align="center">
+# (あなたの名前) のGitHubへようこそ
 
-# 村瀨亮介のGitHub
+## Profile
+- Name: (あなたの名前)
+- Location: (あなたの拠点)
+- Job: (あなたの職業)
 
-</div>
+## Interests
+- (興味のある技術1)
+- (興味のある技術2)
+- (興味のある技術3)
 
-***
+## Contact
+- Mail: (あなたのメールアドレス)
+- X(Twitter): (あなたのXアカウントへのリンク)
 
-### プロフィール
-
-村瀨亮介ですです。
-
-なんかいろいろしています。
-
-<br>
-
-### 更新情報
-
-2025.06.12　頁開設
-
-2025.06.10　リポジトリ「△△」作成
-
-<br>
-
-### 主な制作物
-
-・リポジトリ「△△」
-
-・リポジトリ「××」
-
-<br>
-
-### 技術
-
-言語： Python, JavaScript, HTML
-
-<br>
-
-### リンク
-
-[ブログ](https://example.com)
-
-[X(旧Twitter)](https://twitter.com/your_account)
-
-***
-
-<div align="center">
-
-あなたは
-
-<br>
-
-<img src="https://profile-counter.glitch.me/YOUR_GITHUB_USERNAME/count.svg" alt="アクセスカウンター">
-
-<br>
-
-人目のお客様です。
-
-</div>
-
-<br>
-<br>
-
-<p align="center">
-  工事中
-</p>
+---
+Copyright © (現在の年) (あなたの名前) All Rights Reserved.
