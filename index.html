@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>田中太郎のホームページ</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: "MS UI Gothic", sans-serif;
+      margin: 0;
+      padding: 0 1em;
+    }
+    h1 {
+      font-size: 24px;
+      margin-top: 1em;
+      border-bottom: 2px solid #000;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #000;
+    }
+    .section {
+      margin-bottom: 2em;
+    }
+    .counter, .clock, .update {
+      font-size: 12px;
+      margin-top: 0.5em;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+    .notice {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleString('ja-JP');
+      document.getElementById("clock").textContent = "現在時刻：" + timeStr;
+    }
+    window.onload = function() {
+      updateClock();
+      setInterval(updateClock, 60000);
+    }
+  </script>
+</head>
+<body>
+  <h1>田中太郎のホームページ</h1>
+  <div class="update">最終更新日：2025年6月14日</div>
+  <div class="clock" id="clock"></div>
+  <hr>
+  <div class="section">
+    <div class="notice">※このページは文化保存のため極力シンプルに作成されています。</div>
+  </div>
+
+  <div class="section">
+    <h2>プロフィール</h2>
+    <p><strong>氏名：</strong>田中太郎<br>
+       <strong>職業：</strong>ソフトウェアエンジニア<br>
+       <strong>所在地：</strong>東京都<br>
+       <strong>趣味：</strong>プログラミング、読書、散歩</p>
+  </div>
+
+  <div class="section">
+    <h2>技術スタック</h2>
+    <ul>
+      <li>言語：Python, JavaScript, Go, Java</li>
+      <li>フレームワーク：React, Vue.js, Django, Flask</li>
+      <li>データベース：PostgreSQL, MySQL, MongoDB</li>
+      <li>インフラ：AWS, Docker, Kubernetes</li>
+      <li>その他：Git, Linux, CI/CD</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>経歴</h2>
+    <ul>
+      <li>2020年4月〜　株式会社テックソリューション シニアソフトウェアエンジニア</li>
+      <li>2018年4月〜2020年3月　株式会社デジタルイノベーション ソフトウェアエンジニア</li>
+      <li>2016年4月〜2018年3月　フリーランスエンジニア</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>リンク集</h2>
+    <ul>
+      <li><a href="https://abehiroshi.la.coocan.jp/" target="_blank">阿部寛のホームページ</a></li>
+      <li><a href="mailto:tanaka.taro@example.com">相互リンクお申し込み</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>連絡先</h2>
+    <p>Email: tanaka.taro@example.com</p>
+    <p>GitHub: <a href="https://github.com/tanaka-taro" target="_blank">tanaka-taro</a></p>
+    <p>Twitter: @tanaka_taro_dev</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/tanaka-taro" target="_blank">tanaka-taro</a></p>
+  </div>
+
+  <hr>
+  <div class="section">
+    <p>このページはGitHub Pages上で公開されています。</p>
+    <p>© 2025 Tanaka Taro. All rights reserved.</p>
+  </div>
+</body>
+</html>
