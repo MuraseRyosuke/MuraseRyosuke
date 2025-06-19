@@ -4,18 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>村瀨亮介のREADME.md</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
-      background-color: #ffffff;
+      background-color: #ffffcc;
       color: #000000;
       font-family: "MS UI Gothic", sans-serif;
       margin: 0;
-      padding: 0 1em;
+    }
+    table.layout {
+      width: 100%;
+      height: 100vh;
+      border-collapse: collapse;
+    }
+    td.left, td.right {
+      width: 20%;
+      background-color: #f0f0f0;
+      vertical-align: top;
+      padding: 1em;
+    }
+    td.center {
+      width: 60%;
+      padding: 1em;
+      vertical-align: top;
     }
     h1 {
-      font-size: 24px;
-      margin-top: 1em;
-      border-bottom: 2px solid #000;
+      font-size: 28px;
+      margin: 1em 0;
+      border-bottom: 3px double #000;
+      text-align: center;
     }
     hr {
       border: none;
@@ -27,14 +44,56 @@
     .counter, .clock, .update {
       font-size: 12px;
       margin-top: 0.5em;
+      text-align: center;
+    }
+    .counter img {
+      height: 20px;
+      vertical-align: middle;
     }
     a {
-      text-decoration: none;
+      text-decoration: underline;
       color: blue;
     }
     .notice {
       color: red;
       font-weight: bold;
+      text-align: center;
+    }
+    .guestbook textarea {
+      width: 100%;
+      height: 80px;
+      font-family: "MS UI Gothic", sans-serif;
+      font-size: 14px;
+    }
+    .guestbook button {
+      font-size: 14px;
+      padding: 4px 8px;
+      margin-top: 5px;
+    }
+    .guestbook-entries {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+    }
+    .midi-container {
+      text-align: center;
+      margin: 1em 0;
+    }
+    .image-board {
+      border: 1px solid #000;
+      padding: 10px;
+      background-color: #fff;
+      font-size: 12px;
+    }
+    .image-board img {
+      max-width: 100%;
+      height: auto;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 1em;
     }
   </style>
   <script>
@@ -43,70 +102,141 @@
       const timeStr = now.toLocaleString('ja-JP');
       document.getElementById("clock").textContent = "現在時刻：" + timeStr;
     }
+
+    function updateCounter() {
+      let count = localStorage.getItem("visitCount");
+      if (!count) {
+        count = 1;
+      } else {
+        count = parseInt(count) + 1;
+      }
+      localStorage.setItem("visitCount", count);
+      const countStr = String(count).padStart(6, '0').split('').map(d => `<img src="counter/${d}.gif" alt="${d}">`).join('');
+      document.getElementById("counterDisplay").innerHTML = countStr;
+    }
+
+    function addEntry() {
+      const entry = document.getElementById('guestbookEntry').value;
+      if (entry.trim() === "") return;
+      const entriesDiv = document.getElementById('entries');
+      const newEntry = document.createElement('div');
+      newEntry.textContent = entry;
+      entriesDiv.appendChild(newEntry);
+      document.getElementById('guestbookEntry').value = "";
+    }
+
     window.onload = function() {
       updateClock();
+      updateCounter();
       setInterval(updateClock, 60000);
     }
   </script>
 </head>
 <body>
   <h1>村瀨亮介のREADME.md</h1>
-  <div class="update">最終更新日：2025年6月18日</div>
+  <div class="update">最終更新日：2025年6月19日</div>
   <div class="clock" id="clock"></div>
+  <div class="counter" id="counterDisplay">カウント中…</div>
   <hr>
-  <div class="section">
-    <div class="notice">※このページは文化保存のため極力シンプルに作成されています。</div>
+
+  <div class="midi-container">
+    <b>♪ MIDIが流れます（対応ブラウザのみ）</b><br>
+    <audio src="bgm.mid" autoplay loop controls hidden></audio>
   </div>
 
-  <div class="section">
-    <h2>プロフィール</h2>
-    <p><strong>氏名：</strong>村瀨亮介<br>
-       <strong>職業：</strong>不明<br>
-       <strong>所在地：</strong>札幌市<br>
-       <strong>趣味：</strong>プログラミング、読書、散歩、DJ、VJ、F1</p>
-  </div>
+  <table class="layout">
+    <tr>
+      <td class="left">
+        <h3>メニュー</h3>
+        <ul>
+          <li><a href="#profile">プロフィール</a></li>
+          <li><a href="#tech">技術スタック</a></li>
+          <li><a href="#career">経歴</a></li>
+          <li><a href="#links">リンク集</a></li>
+          <li><a href="#guestbook">ゲストブック</a></li>
+          <li><a href="#gallery">画像掲示板</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+      </td>
+      <td class="center">
+        <div class="notice">※このページは文化保存のため極力シンプルに作成されています。</div>
 
-  <div class="section">
-    <h2>技術スタック</h2>
-    <ul>
-      <li>言語：Python, JavaScript, Java, HTML5, CSS3</li>
-      <li>フレームワーク：React, Vue.js, Flutter, p5.js</li>
-      <li>データベース：SQLite</li>
-      <li>その他：Git, Linux, TouchDesigner, VDMX6</li>
-    </ul>
-  </div>
+        <div class="section" id="profile">
+          <h2>プロフィール</h2>
+          <p><strong>氏名：</strong>村瀨亮介<br>
+             <strong>職業：</strong>不明<br>
+             <strong>所在地：</strong>札幌市<br>
+             <strong>趣味：</strong>プログラミング、読書、散歩、DJ、VJ、F1</p>
+        </div>
 
-  <div class="section">
-    <h2>経歴</h2>
-    <ul>
-      <li>2024年12月〜2025年5月　HBC北海道放送　コンテンツ制作</li>
-      <li>2020年4月〜2022年6月　ソフトバンク　クルー</li>
-      <li>2018年1月〜2020年2月　丸善雄松堂株式会社　アルバイト</li>
-      <li>2018年8月　日本アイビーエム・ソリューション・ サービス株式会社　インターンシップ</li>
-    </ul>
-  </div>
+        <div class="section" id="tech">
+          <h2>技術スタック</h2>
+          <ul>
+            <li>言語：Python, JavaScript, Java, HTML5, CSS3</li>
+            <li>フレームワーク：React, Vue.js, Flutter, p5.js</li>
+            <li>データベース：SQLite</li>
+            <li>その他：Git, Linux, TouchDesigner, VDMX6</li>
+          </ul>
+        </div>
 
-  <div class="section">
-    <h2>リンク集</h2>
-    <ul>
-      <li><a href="https://muraseryosuke.info/" target="_blank">Murase Ryosuke Portfolio</a></li>
-      <li><a href="https://abehiroshi.la.coocan.jp/" target="_blank">阿部寛のホームページ</a></li>
-      <li><a href="mailto:mail@muraseryosuke.info">相互リンクお申し込み</a></li>
-    </ul>
-  </div>
+        <div class="section" id="career">
+          <h2>経歴</h2>
+          <ul>
+            <li>2024年12月〜2025年5月　HBC北海道放送　コンテンツ制作</li>
+            <li>2020年4月〜2022年6月　ソフトバンク　クルー</li>
+            <li>2018年1月〜2020年2月　丸善雄松堂株式会社　アルバイト</li>
+            <li>2018年8月　日本アイビーエム・ソリューション・ サービス株式会社　インターンシップ</li>
+          </ul>
+        </div>
 
-  <div class="section">
-    <h2>連絡先</h2>
-    <p>Email: mail@muraseryosuke.info</p>
-    <p>GitHub: <a href="https://github.com/MuraseRyosuke" target="_blank">MuraseRyosuke</a></p>
-    <p>Twitter: @vl_lvoO</p>
-    <p>Facebook: <a href="https://www.facebook.com/murase.rmx/" target="_blank">村瀨 亮介</a></p>
-  </div>
+        <div class="section" id="links">
+          <h2>リンク集</h2>
+          <ul>
+            <li><a href="https://muraseryosuke.info/" target="_blank">Murase Ryosuke Portfolio</a></li>
+            <li><a href="https://abehiroshi.la.coocan.jp/" target="_blank">阿部寛のホームページ</a></li>
+            <li><a href="mailto:mail@muraseryosuke.info">相互リンクお申し込み</a></li>
+          </ul>
+        </div>
 
-  <hr>
-  <div class="section">
-    <p>このページはGitHub Pages上で公開されています。</p>
-    <p>© 2025 Murase Ryosuke. All rights reserved.</p>
-  </div>
+        <div class="section" id="guestbook">
+          <h2>ゲストブック</h2>
+          <div class="guestbook">
+            <textarea id="guestbookEntry" placeholder="コメントをどうぞ！"></textarea><br>
+            <button onclick="addEntry()">書き込む</button>
+            <div class="guestbook-entries" id="entries">
+              <b>【注意】</b> このゲストブックはサンプル用です。書き込みは保存されません。<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="gallery">
+          <h2>画像掲示板</h2>
+          <div class="image-board">
+            <p>画像掲示板は現在準備中です。</p>
+            <img src="sample.jpg" alt="サンプル画像">
+          </div>
+        </div>
+
+        <div class="section" id="contact">
+          <h2>連絡先</h2>
+          <p>Email: mail@muraseryosuke.info</p>
+          <p>GitHub: <a href="https://github.com/MuraseRyosuke" target="_blank">MuraseRyosuke</a></p>
+          <p>Twitter: @vl_lvoO</p>
+          <p>Facebook: <a href="https://www.facebook.com/murase.rmx/" target="_blank">村瀨 亮介</a></p>
+        </div>
+      </td>
+      <td class="right">
+        <h3>お知らせ</h3>
+        <p>このページは文化保存の目的で制作されました。</p>
+        <p>スマートフォンでは正しく表示されない場合があります。</p>
+        <p>アクセスログはローカルで記録されます。</p>
+      </td>
+    </tr>
+  </table>
+
+  <footer>
+    このページはGitHub Pages上で公開されています。<br>
+    © 2025 Murase Ryosuke. All rights reserved.
+  </footer>
 </body>
 </html>
