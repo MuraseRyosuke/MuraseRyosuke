@@ -79,7 +79,7 @@
 
 - Email: mail@muraseryosuke.info
 - [GitHub](https://github.com/MuraseRyosuke)
-- Twitter: @vl_lvoO
+- X: @vl_lvoO
 - [Facebook](https://www.facebook.com/murase.rmx/)
 
 ---
