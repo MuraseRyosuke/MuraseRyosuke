@@ -36,11 +36,11 @@
   <text x="20" y="149" fill="#d97706" class="mono bold">  ███╗   ███╗██╗   ██╗██████╗  █████╗ ███████╗███████╗</text>
   <text x="20" y="167" fill="#d97706" class="mono bold">  ████╗ ████║██║   ██║██╔══██╗██╔══██╗██╔════╝██╔════╝</text>
   <text x="20" y="185" fill="#d97706" class="mono bold">  ██╔████╔██║██║   ██║██████╔╝███████║███████╗█████╗  </text>
-  <text x="20" y="203" fill="#d97706" class="mono bold">  ██║╚██╔╝██║██║   ██║██╔══██╗██╔══██║╚════██║██╔══╝  </text>
+  <text x="20" y="203" fill="#d97706" class="mono bold">  ██║╚██╔╝██║██║   ██║██╔══██║██╔══██║╚════██║██╔══╝  </text>
   <text x="20" y="221" fill="#d97706" class="mono bold">  ██║ ╚═╝ ██║╚██████╔╝██║  ██║██║  ██║███████║███████╗</text>
   <text x="20" y="239" fill="#d97706" class="mono bold">  ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝</text>
   <text x="20" y="267" fill="#8b949e" class="mono">             Welcome to Murase Ryosuke System!</text>
-  <text x="20" y="285" fill="#8b949e" class="mono">                Learn once, write anywhere</text>
+  <text x="20" y="285" fill="#8b949e" class="mono">                       Make Everything</text>
   <text x="20" y="310" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Downloading profile template</tspan></text>
   <text x="20" y="330" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Initializing developer dependencies</tspan></text>
   <text x="20" y="350" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Fetching hardware telemetry</tspan></text>
