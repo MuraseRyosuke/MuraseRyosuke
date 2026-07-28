@@ -28,7 +28,7 @@
 <text x="20" y="310" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Downloading profile template</tspan></text>
 <text x="20" y="330" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Initializing developer dependencies</tspan></text>
 <text x="20" y="350" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Fetching hardware telemetry</tspan></text>
-<text x="20" y="370" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Mounting media & tech logs</tspan></text>
+<text x="20" y="370" class="mono"><tspan class="check">✔</tspan><tspan fill="#c9d1d9"> Mounting media &amp; tech logs</tspan></text>
 <text x="20" y="400" fill="#e3b341" class="mono">🎉 Initialization successful. Launching environment...</text>
 <text x="20" y="435" class="mono prompt">MR S:/usr/MuraseRyosuke/local/Music/Videos/Pictures/Curry> <tspan class="cmd">neofetch --human --hardware</tspan></text>
 <text x="20.0" y="480.5" fill="#72b3de" class="mono bold">?</text>
