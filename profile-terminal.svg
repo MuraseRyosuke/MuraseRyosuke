@@ -14,7 +14,7 @@
   </clipPath>
   <clipPath id="clip-line2">
     <rect x="0" y="420" width="0" height="30">
-      <animate attributeName="width" from="0" to="800" dur="1.2s" begin="2.3s" fill="freeze" />
+      <animate attributeName="width" from="0" to="800" dur="2.3s" begin="2.3s" fill="freeze" />
     </rect>
   </clipPath>
 </defs>
@@ -36,7 +36,7 @@
   <text x="20" y="149" fill="#d97706" class="mono bold">  ███╗   ███╗██╗   ██╗██████╗  █████╗ ███████╗███████╗</text>
   <text x="20" y="167" fill="#d97706" class="mono bold">  ████╗ ████║██║   ██║██╔══██╗██╔══██╗██╔════╝██╔════╝</text>
   <text x="20" y="185" fill="#d97706" class="mono bold">  ██╔████╔██║██║   ██║██████╔╝███████║███████╗█████╗  </text>
-  <text x="20" y="203" fill="#d97706" class="mono bold">  ██║╚██╔╝██║██║   ██║██╔══██║██╔══██║╚════██║██╔══╝  </text>
+  <text x="20" y="203" fill="#d97706" class="mono bold">  ██║╚██╔╝██║██║   ██║██╔══██╗██╔══██║╚════██║██╔══╝  </text>
   <text x="20" y="221" fill="#d97706" class="mono bold">  ██║ ╚═╝ ██║╚██████╔╝██║  ██║██║  ██║███████║███████╗</text>
   <text x="20" y="239" fill="#d97706" class="mono bold">  ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝</text>
   <text x="20" y="267" fill="#8b949e" class="mono">             Welcome to Murase Ryosuke System!</text>
@@ -1053,7 +1053,7 @@
   <text x="300" y="523.0" fill="#c9d1d9" class="mono" >. Name: ................. Ryosuke Murase (村瀨 亮介)</text>
   <text x="300" y="537.5" fill="#c9d1d9" class="mono" >. Role: ..... Developer / VJ / DJ / Media Creator</text>
   <text x="300" y="552.0" fill="#c9d1d9" class="mono" >. Location: .......... Asahikawa, Hokkaido, Japan</text>
-  <text x="300" y="566.5" fill="#c9d1d9" class="mono" >. Education: ... B.Design, Hokkaido Univ. (2020)</text>
+  <text x="300" y="566.5" fill="#c9d1d9" class="mono" >. Education: .. B.Des., Hokkaido Univ. of Sci. (2020)</text>
   <text x="300" y="581.0" fill="#c9d1d9" class="mono" >. Hobbies: ....... Programming, Reading, DJ/VJ, F1</text>
   <text x="300" y="610.0" fill="#79c0ff" class="mono" font-weight="bold">[HARDWARE.SPECS]</text>
   <text x="300" y="624.5" fill="#c9d1d9" class="mono" >. OS: ........................ macOS Tahoe 26.5.2</text>
