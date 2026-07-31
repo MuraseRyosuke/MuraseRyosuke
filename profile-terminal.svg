@@ -8,13 +8,13 @@
 </style>
 <defs>
   <clipPath id="clip-line1">
-    <rect x="0" y="40" width="0" height="30">
+    <rect x="0" y="35" width="0" height="40">
       <animate attributeName="width" from="0" to="800" dur="1.2s" begin="0s" fill="freeze" />
     </rect>
   </clipPath>
   <clipPath id="clip-line2">
-    <rect x="0" y="420" width="0" height="30">
-      <animate attributeName="width" from="0" to="800" dur="2.3s" begin="2.3s" fill="freeze" />
+    <rect x="0" y="410" width="0" height="40">
+      <animate attributeName="width" from="0" to="800" dur="1.2s" begin="2.3s" fill="freeze" />
     </rect>
   </clipPath>
 </defs>
